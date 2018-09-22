@@ -13,7 +13,7 @@ Gradle:
 ## Usage
 
 
-1. Implement `DatabaseAccessibleObject` in any class that you want to be queried
+* Implement `DatabaseAccessibleObject` in any class that you want to be queried
 ```java
 public class Foo implements DatabaseAccessibleObject {
     
@@ -46,7 +46,7 @@ public FooDataManager() {
 ```
 
 
-2. Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
+* Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 ```java
 public class FooViewModel extends ViewModel implements ViewModelInterface {
 
@@ -54,7 +54,7 @@ public class FooViewModel extends ViewModel implements ViewModelInterface {
 ```
 
 
-3. Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
+* Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
 ```java
 DataManager dataManager = new FooDataManager();
 MediatorLiveData<List<Foo>> mediator = new MediatorLiveData<>();
