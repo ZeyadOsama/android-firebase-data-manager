@@ -56,6 +56,10 @@ public FooDataManager() {
 }
 ```
 
+* Add your `Firebase` reference
+```java
+super.setDatabaseReference( /* add your reference here */ );
+```
 
 * Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 ```java
@@ -63,7 +67,6 @@ public class FooViewModel extends ViewModel implements ViewModelInterface {
 
 }
 ```
-
 
 * Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
 ```java
