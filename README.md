@@ -35,12 +35,19 @@ public class FooDataManager extends DataManager<Foo> {
 
 }
 ```
- and then add a constructor matching super, where it takes a parameter `Foo.class`
+* Add a constructor matching super, where it takes a parameter `Foo.class`
 ```java
 public FooDataManager() {
     super(Foo.class);
 }
 ```
+
+
+* Add your `Firebase` reference
+```java
+super.setDatabaseReference( /* add your reference here */ );
+```
+        
 * Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 
 ```java
