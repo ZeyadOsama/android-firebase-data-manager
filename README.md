@@ -3,7 +3,6 @@ Easily managing generic objects which are retrevied from Firebase
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ChadCSong/ShineButton/raw/master/LICENSE)
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
 ## Installation
 Gradle:
@@ -14,7 +13,7 @@ Gradle:
 ## Usage
 
 
-* Implement `DatabaseAccessibleObject` in any class that you want to be queried
+1. Implement `DatabaseAccessibleObject` in any class that you want to be queried
 ```java
 public class Foo implements DatabaseAccessibleObject {
     
@@ -47,7 +46,7 @@ public FooDataManager() {
 ```
 
 
-* Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
+2. Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 ```java
 public class FooViewModel extends ViewModel implements ViewModelInterface {
 
@@ -55,7 +54,7 @@ public class FooViewModel extends ViewModel implements ViewModelInterface {
 ```
 
 
-Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
+3. Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
 ```java
 DataManager dataManager = new FooDataManager();
 MediatorLiveData<List<Foo>> mediator = new MediatorLiveData<>();
