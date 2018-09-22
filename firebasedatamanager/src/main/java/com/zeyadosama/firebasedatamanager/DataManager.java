@@ -26,8 +26,8 @@ public abstract class DataManager<T extends DatabaseAccessibleObject> {
     private Class dataClass;
 
     public DataManager(Class c) {
-        this.dataClass = c;
         this.TAG = c.getSimpleName();
+        this.dataClass = c;
         this.liveData = new MutableLiveData<>();
         this.objectsList = new ArrayList<>();
     }
