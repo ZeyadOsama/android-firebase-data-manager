@@ -7,7 +7,7 @@ Easily managing generic objects which are retrevied from Firebase
 ## Installation
 Gradle:
 ```groovy
-'com.github.ZeyadOsama:FirebaseDataManager-Android:Beta'
+implementation 'com.github.ZeyadOsama:FirebaseDataManager-Android:Beta'
 ```
 
 ## Usage
