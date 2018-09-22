@@ -12,8 +12,9 @@ Gradle:
 ```
 
 ## Usage
-* Implement `DatabaseAccessibleObject` in any class that you want to be queried
 
+
+* Implement `DatabaseAccessibleObject` in any class that you want to be queried
 ```java
 public class Foo implements DatabaseAccessibleObject {
     
@@ -28,29 +29,39 @@ public class Foo implements DatabaseAccessibleObject {
     }
 }
 ```
-* Create your data manager class for your class and extend `DataManager<T extends DatabaseAccessibleObject>`
 
+
+* Create your data manager class for your class and extend `DataManager<T extends DatabaseAccessibleObject>`
 ```java
 public class FooDataManager extends DataManager<Foo> {
 
 }
 ```
- and then add a constructor matching super, where it takes a parameter `Foo.class`
+
+
+Then add a constructor matching super, where it takes a parameter `Foo.class`
 ```java
 public FooDataManager() {
     super(Foo.class);
 }
 ```
-* Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 
+
+* Implement `ViewModelInterface<DatabaseAccessibleObject>` in your `ViewModel`
 ```java
-public class FooViewModel extends ViewModel implements ViewModelInterface
+public class FooViewModel extends ViewModel implements ViewModelInterface {
+
+}
 ```
+
+
 Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
 ```java
 DataManager dataManager = new FooDataManager();
 MediatorLiveData<List<Foo>> mediator = new MediatorLiveData<>();
 ```
+
+
 Override `ViewModelInterface` methods in the following way
 ```java
 @Override
