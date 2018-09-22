@@ -49,7 +49,7 @@ public class FooViewModel extends ViewModel implements ViewModelInterface
 Create an instance of your `DataManager` and a `MediatorLiveData` variable in your `ViewModel`
 ```java
 DataManager dataManager = new FooDataManager();
-MediatorLiveData<List<Foo>> educationMediator = new MediatorLiveData<>();
+MediatorLiveData<List<Foo>> mediator = new MediatorLiveData<>();
 ```
 Override `ViewModelInterface` methods in the following way
 ```java
@@ -74,16 +74,16 @@ public void removeFromDatabase(String databasePath) {
 }
 
 @Override
-public LiveData<List<Education>> getObjectsList() {
-    if (educationMediator.getValue() == null) {
-        educationMediator.addSource(dataManager.getObjectsListFromDatabase(), new Observer<List<Education>>() {
+public LiveData<List<Foo>> getObjectsList() {
+    if (mediator.getValue() == null) {
+        mediator.addSource(dataManager.getObjectsListFromDatabase(), new Observer<List<Foo>>() {
             @Override
-            public void onChanged(@Nullable List<Education> education) {
-                educationMediator.setValue(education);
+            public void onChanged(@Nullable List<Foo> foo) {
+                mediator.setValue(foo);
             }
         });
     }
-    return educationMediator;
+    return mediator;
 }
 ```
 
