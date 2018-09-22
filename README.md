@@ -38,7 +38,7 @@ public class FooDataManager extends DataManager<Foo> {
 ```
 
 
-Then add a constructor matching super, where it takes a parameter `Foo.class`
+* Add a constructor matching super, where it takes a parameter `Foo.class`
 ```java
 public FooDataManager() {
     super(Foo.class);
@@ -61,7 +61,7 @@ MediatorLiveData<List<Foo>> mediator = new MediatorLiveData<>();
 ```
 
 
-Override `ViewModelInterface` methods in the following way
+* Override `ViewModelInterface` methods in the following way
 ```java
 @Override
 public void writeToDatabase(Education education) {
