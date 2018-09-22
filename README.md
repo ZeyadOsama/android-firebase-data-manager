@@ -5,13 +5,24 @@ Easily managing generic objects which are retrevied from Firebase
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
 
 ## Installation
-Gradle:
+
+* Add it in your root build.gradle at the end of repositories:
 ```groovy
-implementation 'com.github.ZeyadOsama:FirebaseDataManager-Android:Beta'
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+* Add the dependency
+```groovy
+dependencies {
+    implementation 'com.github.ZeyadOsama:FirebaseDataManager-Android:Beta'
+}
 ```
 
 ## Usage
-
 
 * Implement `DatabaseAccessibleObject` in any class that you want to be queried
 ```java
