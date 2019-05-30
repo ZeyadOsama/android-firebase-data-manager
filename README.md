@@ -1,23 +1,28 @@
 # Firebase Data Manager
 Easily managing generic objects which are retrevied from Firebase
-
+  
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ChadCSong/ShineButton/raw/master/LICENSE)
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
 
 ## Installation
 
 * Add it in your root build.gradle at the end of repositories:
-```groovy
+```gradle
 allprojects {
+    .
+    .
     repositories {
-        ...
+        .
+        .
         maven { url 'https://jitpack.io' }
     }
 }
 ```
 * Add the dependency
-```groovy
+```gradle
 dependencies {
+    .
+    .
     implementation 'com.github.ZeyadOsama:FirebaseDataManager-Android:Beta'
 }
 ```
